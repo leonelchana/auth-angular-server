@@ -1,6 +1,7 @@
 <form class="login100-form" 
     autocomplete="off"
-    [formGroup]="miFormulario">
+    [formGroup]="miFormulario"
+    (ngSubmit)="login()">
     <span class="login100-form-title p-b-49">
         Login
     </span>
@@ -29,7 +30,9 @@
     <div class="container-login100-form-btn">
         <div class="wrap-login100-form-btn">
             <div class="login100-form-bgbtn"></div>
-            <button class="login100-form-btn">
+            <button class="login100-form-btn"
+            [disabled]="miFormulario.invalid"
+            >
                 Login
             </button>
         </div>
